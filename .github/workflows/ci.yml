@@ -21,8 +21,8 @@ jobs:
 
       - name: Set up env vars
         run: |
-          #export GO_VERSION=1.16.5
-	  echo "GO_VERSION=1.16.5" >> $GITHUB_ENV
+          export GO_VERSION=1.16.5
+          echo "GO_VERSION=1.16.5" >> $GITHUB_ENV
 
       - name: Prepare go environment
         uses: actions/setup-go@v2
