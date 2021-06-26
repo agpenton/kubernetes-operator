@@ -38,7 +38,7 @@ jobs:
         name: Build
         run: |
           export GO_VERSION=1.16.5
-          docker build . # will run buildx
+          docker build . --build-arg GO_VERSION=1.16.5 # will run buildx
 
       -
         name: Login to DockerHub
