@@ -30,10 +30,15 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
 
       -
-        name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
+        id: buildx
         with:
-          config: ./config.base.env
+          install: true
+      -
+        name: Build
+        run: |
+          export GO_VERSION=1.16.5
+          docker build . # will run buildx
 
       -
         name: Login to DockerHub
