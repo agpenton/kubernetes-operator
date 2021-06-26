@@ -37,8 +37,8 @@ jobs:
       -
         name: Build
         run: |
-          export GO_VERSION=1.16.5
-          docker build . --build-arg GO_VERSION=${{ env.GO_VERSION }} # will run buildx
+          export GO_VERSION="1.16.5"
+          docker build . --build-arg GO_VERSION=${GO_VERSION} # will run buildx
 
       -
         name: Login to DockerHub
