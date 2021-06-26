@@ -42,4 +42,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: agpenton/jenkins-operator:latest
-          build-args: GO_VERSION="1.16.5"
+          build-args: GO_VERSION=1.16.5
