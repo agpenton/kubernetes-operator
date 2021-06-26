@@ -51,18 +51,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: linux/amd64
+          file: ./Dockerfile-arm
+          platforms: linux/arm64
           push: true
           tags: agpenton/jenkins-operator:latest
           build-args: GO_VERSION="1.16.5"
-
-     -
-       name: Build and push ARM
-       uses: docker/build-push-action@v2
-       with:
-         context: .
-         file: ./Dockerfile-arm
-         platforms: linux/arm64
-         push: true
-         tags: agpenton/jenkins-operator:latest
-         build-args: GO_VERSION=${GO_VERSION}
