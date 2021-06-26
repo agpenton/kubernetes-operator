@@ -1,4 +1,5 @@
 ARG GO_VERSION
+ENV GO_VERSION 1.16.5
 
 # Build the manager binary
 FROM golang:$GO_VERSION as builder
