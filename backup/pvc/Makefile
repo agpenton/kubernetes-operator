@@ -32,7 +32,7 @@ ARGS ?= $(EXTRA_ARGS)
 .DEFAULT_GOAL := help
 
 .PHONY: all
-all: status checkmake clean build verify install docker-build docker-images docker-push docker-release ## Build the image
+all: checkmake clean build verify install docker-build docker-images docker-push docker-release ## Build the image
 # all: status checkmake clean build verify install docker-build docker-images ## Build the image
 	@echo "+ $@"
 
