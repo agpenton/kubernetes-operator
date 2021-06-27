@@ -85,7 +85,7 @@ docker-login: ## Log in into the Docker repository
 .PHONY: docker-build
 docker-build: check-env ## Build the container
 	@echo "+ $@"
-	docker build . --build-arg UID=$(UID) --build-arg GID=$(GID) -t $(DOCKER_REGISTRY)-$(NAME):$(GITCOMMIT) --file Dockerfile
+	docker build . --build-arg UID=$(UID) --build-arg GID=$(GID) --build-arg ARCH=arm64 -t $(DOCKER_REGISTRY)-$(NAME):$(GITCOMMIT) --file Dockerfile
 
 .PHONY: docker-images
 docker-images: ## List all local containers
