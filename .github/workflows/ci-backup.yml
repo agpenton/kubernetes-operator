@@ -63,7 +63,7 @@ jobs:
           context: ./backup/pvc
           platforms: linux/arm64
           push: true
-          tags: agpenton/jenkins-operator-backup-pvc:latest
+          tags: agpenton/jenkins-operator-backup-pvc:arm64
           build-args: GO_VERSION=1.16.5, UID="1000", GID="1000"
       -
         name: Build
