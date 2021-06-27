@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
-ARG UID
-ARG GID
+ARG UID="1000"
+ARG GID="1000"
 
 ENV USER=user
 
