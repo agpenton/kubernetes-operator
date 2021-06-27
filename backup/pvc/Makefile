@@ -63,7 +63,7 @@ HAS_CHECKMAKE := $(shell which checkmake)
 checkmake: ## Check this Makefile
 	@echo "+ $@"
 ifndef HAS_CHECKMAKE
-	go get -u github.com/mrtazz/checkmake
+	go get github.com/mrtazz/checkmake
 endif
 	@checkmake Makefile
 
