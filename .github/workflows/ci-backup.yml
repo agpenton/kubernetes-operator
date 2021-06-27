@@ -41,7 +41,9 @@ jobs:
       -
         name: install checkmake
         run: |
-          go install github.com/mrtazz/checkmake
+          export PATH="$PATH:$GOPATH/bin"
+          go get -u github.com/mrtazz/checkmake
+          # go install github.com/mrtazz/checkmake
 
       -
         name: Set up Docker Buildx
