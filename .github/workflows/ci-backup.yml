@@ -32,6 +32,7 @@ jobs:
           echo "NAME=backup" >> $GITHUB_ENV
           echo "DOCKER_ORGANIZATION=agpenton" >> $GITHUB_ENV
           echo "GOPATH=/home/runner/go" >> $GITHUB_ENV
+          echo "GOARCH=arm64" >> $GITHUB_ENV
 
       -
         name: Prepare go environment
